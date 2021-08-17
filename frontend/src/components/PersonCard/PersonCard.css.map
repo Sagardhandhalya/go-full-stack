@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAA;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,YAAY,EAAE,IAAI;CASrB;;AAZD,AAKI,iBALa,CAKb,GAAG,CAAA;EACC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,UAAU;EAC5B,MAAM,EAAC,QACX;CAAC",
+    "sources": [
+        "PersonCard.scss"
+    ],
+    "names": [],
+    "file": "PersonCard.css"
+}

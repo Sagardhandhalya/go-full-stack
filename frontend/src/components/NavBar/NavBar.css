@@ -1,0 +1,32 @@
+.navbar__container {
+  height: 10vh;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 1px 1px 3px #b39696;
+          box-shadow: 1px 1px 3px #b39696;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px auto;
+}
+
+.navbar__container img {
+  width: 10vh;
+  height: 8vh;
+}
+
+.navbar__container ul {
+  list-style: none;
+  margin-right: 40px;
+}
+
+.navbar__container ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=NavBar.css.map */

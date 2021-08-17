@@ -1,0 +1,14 @@
+.pcard__container {
+  width: 200px;
+  height: 300px;
+  margin-right: 50px;
+}
+
+.pcard__container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  margin: 0px auto;
+}
+/*# sourceMappingURL=PersonCard.css.map */

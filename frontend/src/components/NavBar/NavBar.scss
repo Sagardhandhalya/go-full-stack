@@ -1,0 +1,25 @@
+@import "./../../config/theme";
+
+.navbar__container {
+    height: 10vh;
+    background-color: $bg-color;
+    box-shadow: 1px 1px 3px rgb(179, 150, 150);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+
+    img {
+        width: 10vh;
+        height: 8vh;
+    }
+
+    ul {
+        list-style: none;
+        margin-right: 40px;
+        li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+}

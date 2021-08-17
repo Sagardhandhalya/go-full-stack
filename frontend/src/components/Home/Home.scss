@@ -1,0 +1,18 @@
+.home__container{
+    display: flex;
+    flex-wrap: wrap;
+
+    .home__pluse_button{
+        position:absolute;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 50%;
+        border:none;
+        background: rgb(200, 247, 247);
+        padding: 5px 20px;
+        box-shadow: 1px 1px 1px gray;
+        font-size: 70px;
+        color: rgb(103, 16, 216);
+        cursor: pointer;
+    }
+}
