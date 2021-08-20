@@ -61,7 +61,7 @@ your Ui will run on http://localhost:3000/
 
 1. first update your database connetion string in /backend/db/db.go file in the sql.Open function.
 
- string formate will be
+connection string formate will be
 
 ```
 <username>:<password>@tcp(127.0.0.1:3306)/<schema name>
