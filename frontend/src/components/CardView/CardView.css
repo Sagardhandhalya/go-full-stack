@@ -1,0 +1,87 @@
+.home__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.home__container .home__pluse_person {
+  position: fixed;
+  bottom: 80px;
+  right: 60px;
+  -webkit-animation: person 0.7s 1 ease-out;
+          animation: person 0.7s 1 ease-out;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  overflow: hidden;
+}
+
+.home__container .home__pluse_relation {
+  position: fixed;
+  bottom: 140px;
+  right: 60px;
+  -webkit-animation: relation 0.7s 1 ease-out;
+          animation: relation 0.7s 1 ease-out;
+  overflow: hidden;
+}
+
+.home__container .home__pluse {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+}
+
+@-webkit-keyframes person {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes person {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes relation {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes relation {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=CardView.css.map */

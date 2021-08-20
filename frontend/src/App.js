@@ -1,20 +1,21 @@
 import './App.css';
-import {useState,useEffect} from 'react'
-import { fetchAllRelative } from './apiCalls/apiCalls'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-import Home from './components/Home/Home';
+import CardView from './components/CardView/CardView';
+import GraphView from './components/GraphView/GraphView';
+
 function App() {
-  const [relatives, setRelatives] = useState([])
-  useEffect(() => {
-    fetchAllRelative().then((data) => {
-      console.log(data);
-      setRelatives(data)
-    }).catch(err => console.log(err))
-  }, [])
   return (
-    <div >
-      <NavBar/>
-      <Home/>
+    <div className="App">
+
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route path="/g" component={GraphView} />
+        <Route path="/" component={CardView} />
+      </Switch>
+    </Router>
     </div>
   );
 }

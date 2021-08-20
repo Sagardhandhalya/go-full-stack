@@ -11,7 +11,6 @@ import (
 )
 
 var Db *sql.DB
-var err error
 
 func init() {
 	Db, _ = db.ConnectToDb()
@@ -40,14 +39,14 @@ func HandleAddRelative(w http.ResponseWriter, r *http.Request) {
 	var person db.Relative
 	res, err := Db.Query("SELECT * FROM RD.people order by id Desc limit 1")
 	if err != nil {
-		http.Error(w, fmt.Sprintf("ERROR in updating person %s", err.Error()), http.StatusBadRequest)
+		http.Error(w, fmt.Sprintf("ERROR in creating person %s", err.Error()), http.StatusBadRequest)
 		return
 	}
 	defer res.Close()
 	for res.Next() {
 		err = res.Scan(&person.Id, &person.Name, &person.City, &person.ContactNo, &person.PhotoUrl)
 		if err != nil {
-			http.Error(w, fmt.Sprintf("ERROR in updating person %s", err.Error()), http.StatusInternalServerError)
+			http.Error(w, fmt.Sprintf("ERROR in creating person %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 	}
@@ -169,8 +168,13 @@ func GetRelatives(w http.ResponseWriter, r *http.Request) {
 
 func GetRelations(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	id := r.URL.Query().Get("id")
+	if id == "" {
+		http.Error(w, "id parameter is not found", http.StatusBadRequest)
+		return
+	}
 	var relations []db.Relation
-	rows, err := Db.Query("SELECT * FROM relations")
+	rows, err := Db.Query("SELECT * FROM relations where p1=?", id)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Error in fetching all relatives %s", err.Error()), http.StatusInternalServerError)
 		return

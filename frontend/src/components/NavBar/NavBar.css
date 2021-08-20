@@ -6,9 +6,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -18,15 +17,45 @@
 .navbar__container img {
   width: 10vh;
   height: 8vh;
+  -webkit-animation: App-logo-spin infinite 5s linear;
+          animation: App-logo-spin infinite 5s linear;
 }
 
 .navbar__container ul {
   list-style: none;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .navbar__container ul li {
   display: inline-block;
   margin-left: 20px;
+}
+
+.navbar__container ul li a {
+  text-decoration: none;
+  color: #473c3c;
+  font-weight: 500;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=NavBar.css.map */

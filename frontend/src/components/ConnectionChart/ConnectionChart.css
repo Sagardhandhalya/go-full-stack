@@ -1,0 +1,13 @@
+.canvas__container {
+  max-width: 600px;
+  max-height: 600px;
+  overflow: scroll;
+}
+
+.canvas__container .close-btn {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*# sourceMappingURL=ConnectionChart.css.map */

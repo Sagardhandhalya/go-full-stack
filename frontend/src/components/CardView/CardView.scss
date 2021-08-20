@@ -1,0 +1,51 @@
+.home__container{
+    display: flex;
+    flex-wrap: wrap;
+  margin-top: 20px;
+   
+    .home__pluse_person{
+        position:fixed;
+        bottom: 80px;
+        right: 60px;  
+        animation: person 0.7s 1 ease-out ;
+        transition: width 2s;
+        overflow: hidden;
+    }
+    .home__pluse_relation{
+      position:fixed;
+      bottom: 140px;
+      right: 60px; 
+      animation: relation 0.7s 1 ease-out;
+      overflow: hidden;
+    }
+
+    .home__pluse{
+      position:fixed;
+      bottom: 20px;
+      right: 100px; 
+    }
+    
+
+    @keyframes person {
+      0%{
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0px);
+        opacity: 1;
+      }  
+     
+    }
+
+    @keyframes relation {
+      0%{
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+}
