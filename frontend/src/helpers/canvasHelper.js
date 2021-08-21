@@ -4,7 +4,7 @@ export function drawConnetionChart(ctx,res,out,name){
         ctx.fillStyle="darkblue"
         ctx.lineWidth="2"
         ctx.font = "bold 12pt Comic Sans MS";
-        let  m = res.length*90+100;
+        let  m = res.length*50+100;
         // ctx.strokeRect(10,m/2 ,80, 50);
         ctx.fillText(`${name}`,20,m/2+30)
        
