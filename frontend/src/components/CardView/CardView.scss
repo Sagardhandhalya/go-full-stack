@@ -7,7 +7,7 @@
         position:fixed;
         bottom: 80px;
         right: 60px;  
-        animation: person 0.7s 1 ease-out ;
+        animation: person 0.6s 1 ease-in ;
         transition: width 2s;
         overflow: hidden;
     }
@@ -15,37 +15,33 @@
       position:fixed;
       bottom: 140px;
       right: 60px; 
-      animation: relation 0.7s 1 ease-out;
+      animation: relation 0.5s 1 ease-out;
       overflow: hidden;
     }
 
     .home__pluse{
       position:fixed;
       bottom: 20px;
-      right: 100px; 
+      right: 40px; 
     }
     
 
     @keyframes person {
       0%{
-        transform: translateY(30px);
-        opacity: 0;
+        transform: translateY(60px) translateX(10px) scale(0);
       }
       100%{
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(0px) translateX(0px);
       }  
      
     }
 
     @keyframes relation {
       0%{
-        transform: translateY(30px);
-        opacity: 0;
+        transform: translateY(120px) translateX(10px) scale(0) ; 
       }
       100%{
-        transform: translateY(0px);
-        opacity: 1;
+        transform: translateY(0px) translateX(0px);
       }
     }
 }

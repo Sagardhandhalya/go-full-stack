@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { addRelation } from '../../apiCalls/apiCalls'
 
 const AddRelationForm = ({ persons,closeModal }) => {
     const [p1, setP1] = useState(persons[0].id)
     const [p2, setP2] = useState(persons[0].id)
     const [name, setName] = useState("")
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden'
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [])
+
+
     const AddRelation= ()=>{
         addRelation({"p1":+p1,"p2":+p2,name}).then(res=>{
             closeModal(false)

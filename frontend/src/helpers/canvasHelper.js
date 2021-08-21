@@ -6,7 +6,7 @@ export function drawConnetionChart(ctx,res,out,name){
         ctx.font = "bold 12pt Comic Sans MS";
         let  m = res.length*50+100;
         // ctx.strokeRect(10,m/2 ,80, 50);
-        ctx.fillText(`${name}`,20,m/2+30)
+        ctx.fillText(`${name}`,2,m/2+30)
        
         for(let i=1;i<=res.length;i++)
         {
@@ -21,13 +21,14 @@ export function drawConnetionChart(ctx,res,out,name){
         }
     }
     else{
-        ctx.strokeStyle = 'gray';
-        ctx.font = "12pt Arial ";
-        ctx.strokeRect(10,150, 80, 50);
-        ctx.fillText(`${name}`,20,180)
+        ctx.strokeStyle ="darkblue"
+        ctx.fillStyle="darkblue"
+        ctx.lineWidth="2"
+        ctx.font = "bold 12pt Comic Sans MS";
+        ctx.fillText(`${name}`,2,100)
         ctx.beginPath()
-        ctx.moveTo(90,175)
-        ctx.lineTo(120,175)
+        ctx.moveTo(90,95)
+        ctx.lineTo(120,95)
         ctx.stroke();
     }
 }

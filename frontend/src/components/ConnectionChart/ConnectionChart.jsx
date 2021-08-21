@@ -4,9 +4,18 @@ import { drawConnetionChart } from '../../helpers/canvasHelper'
 import "./ConnectionChart.css"
 const ConnectionChart = ({closeModal,id,persons}) => {
     let currentPerson = persons.filter(p => p.id === id)[0] 
-    const [h, setH] = useState(400)
+    const [h, setH] = useState(200)
     const [w, setW] = useState(400)
     const canvas = useRef(null)
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden'
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [])
+
+    
     useEffect(() => {
         fetchConnetionOfAPerson(id).then(res =>{
             let ctx = canvas.current.getContext('2d')
