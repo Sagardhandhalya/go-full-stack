@@ -11,8 +11,8 @@
   position: fixed;
   bottom: 80px;
   right: 60px;
-  -webkit-animation: person 0.6s 1 ease-in;
-          animation: person 0.6s 1 ease-in;
+  -webkit-animation: person 0.3s 1 ease-in;
+          animation: person 0.3s 1 ease-in;
   -webkit-transition: width 2s;
   transition: width 2s;
   overflow: hidden;
@@ -22,8 +22,8 @@
   position: fixed;
   bottom: 140px;
   right: 60px;
-  -webkit-animation: relation 0.5s 1 ease-out;
-          animation: relation 0.5s 1 ease-out;
+  -webkit-animation: relation 0.2s 1 ease-out;
+          animation: relation 0.2s 1 ease-out;
   overflow: hidden;
 }
 

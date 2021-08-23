@@ -10,4 +10,8 @@
   top: 0;
   right: 0;
 }
+
+.canvas__container hr {
+  margin: 0px;
+}
 /*# sourceMappingURL=ConnectionChart.css.map */

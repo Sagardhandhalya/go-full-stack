@@ -1,5 +1,14 @@
 ## Full Stack application [ React - Go - Mysql ]
 
+### Project Descreption 
+
+The main idea was of the project is to visualize self-relation on a person table, in RDBMS we use self-relation to store the graph in the database, database contains only 2 tables one is the person and another is relation which mapping for 2 person. so we can visualize the connection of a person and all person and their connection as a graph.
+
+
+### Future plan 
+
+we store data in terms of persons and their connection so we can apply graph algorithms to find solutions to problems like person 1 is connected with person 2 if yes then find the shortest path, we can show this in the UI graph.
+
 
 ### Project Set up 
 
@@ -39,9 +48,8 @@ go mod tidy
 2. to start backend server run this command.
 
 ```
-go build -o server
+go run main.go
 
-./server
 ```
 
 #### Frontend set up 

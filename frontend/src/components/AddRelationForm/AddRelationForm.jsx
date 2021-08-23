@@ -27,13 +27,13 @@ const AddRelationForm = ({ persons,closeModal }) => {
             <div className="input">
                 <label className="form-label">Person 1 </label>
                 <select class="form-select" value={p1} onChange={(e)=> setP1(e.target.value)} aria-label="Default select example">
-                    {persons.map(p =>  <option value={p.id}>{p.name}</option>)}
+                    {persons.map(p =>  <option key={p.id} value={p.id}>{p.name}</option>)}
                 </select>
             </div>
             <div className="input">
                 <label className="form-label">Person 2 </label>
                 <select class="form-select"value={p2} onChange={(e)=> setP2(e.target.value)} aria-label="Default select example">
-                    {persons.map(p =>  <option value={p.id}>{p.name}</option>)}
+                    {persons.map(p =>  <option key={p.id} value={p.id}>{p.name}</option>)}
                 </select>
             </div>
             <div className="input">

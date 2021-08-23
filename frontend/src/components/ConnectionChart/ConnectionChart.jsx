@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { fetchConnetionOfAPerson } from '../../apiCalls/apiCalls'
-import { drawConnetionChart } from '../../helpers/canvasHelper'
+import { drawConnetionChart } from '../../helpers/drawConnetionChart'
 import "./ConnectionChart.css"
 const ConnectionChart = ({closeModal,id,persons}) => {
     let currentPerson = persons.filter(p => p.id === id)[0] 
@@ -20,7 +20,7 @@ const ConnectionChart = ({closeModal,id,persons}) => {
         fetchConnetionOfAPerson(id).then(res =>{
             let ctx = canvas.current.getContext('2d')
             if(res){
-                setH(res.length*50+100)
+                setH(res.length*50+80)
                 let idArr = res.map(r => r.p2)
                 let out = persons
                 .filter(p => idArr.includes(p.id))

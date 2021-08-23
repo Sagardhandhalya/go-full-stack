@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { fetchAllRelative, deletePerson,updatePerson,createPerson } from '../../apiCalls/apiCalls'
+import {deletePerson,updatePerson,createPerson, fetchAllPerson } from '../../apiCalls/apiCalls'
 import AddRelationForm from '../AddRelationForm/AddRelationForm'
 import ConnectionChart from '../ConnectionChart/ConnectionChart'
 import Modal from '../Modal/Modal'
@@ -15,7 +15,7 @@ const CardView = () => {
     const [btnStatus, setBtnStatus] = useState(false)
     const [relationOpen, setRelationOpen] = useState(false)
     useEffect(() => {
-        fetchAllRelative().then((data) => {
+        fetchAllPerson().then((data) => {
             console.log(data);
             setPersons(data)
         }).catch(err => console.log(err))

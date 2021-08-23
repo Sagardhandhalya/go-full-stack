@@ -4,20 +4,19 @@ export function drawConnetionChart(ctx,res,out,name){
         ctx.fillStyle="darkblue"
         ctx.lineWidth="2"
         ctx.font = "bold 12pt Comic Sans MS";
-        let  m = res.length*50+100;
-        // ctx.strokeRect(10,m/2 ,80, 50);
-        ctx.fillText(`${name}`,2,m/2+30)
+        let m = res.length*50+60;
+        ctx.fillText(`${name}`,2,m/2)
        
-        for(let i=1;i<=res.length;i++)
+        for(let i=0;i<res.length;i++)
         {
             ctx.beginPath()
-            ctx.moveTo(90,m/2+25)
-            ctx.lineTo(110,m/2+25)
-            ctx.lineTo(110,60*i+25)
-            ctx.fillText(`${res[i-1].name}`,130,60*i+20)
-            ctx.lineTo(250,60*i+25)
+            ctx.moveTo(90,m/2)
+            ctx.lineTo(110,m/2)
+            ctx.lineTo(110,60*i+30)
+            ctx.fillText(`${res[i].name}`,130,60*i+25)
+            ctx.lineTo(250,60*i+30)
             ctx.stroke();
-            ctx.fillText(`${out[res[i-1].p2]}`,280,60*i+30)
+            ctx.fillText(`${out[res[i].p2]}`,280,60*i+33)
         }
     }
     else{
