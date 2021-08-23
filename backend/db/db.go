@@ -8,7 +8,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-type Relative struct {
+type Person struct {
 	Id        int32  `json:"id"`
 	Name      string `json:"name"`
 	City      string `json:"city"`
@@ -28,7 +28,6 @@ var err error
 func ConnectToDb() (*sql.DB, error) {
 
 	if Db == nil {
-
 		Db, err = sql.Open("mysql", "root:9081606040@tcp(127.0.0.1:3306)/RD")
 
 		if err != nil {

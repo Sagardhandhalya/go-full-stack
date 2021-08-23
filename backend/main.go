@@ -1,3 +1,28 @@
+/*
+Package main defines web APIs to be used with frontend.
+this package involves API for CRUD opration on person, relation
+and also implement authentication.
+
+routes :>>
+
+	 / := front end index.html
+	 	/api
+			/auth
+				/login
+				/logout
+				/signout
+
+			/person
+				/
+				/add
+				/update
+				/delete
+				/relations
+
+			/relation
+				/add
+*/
+
 package main
 
 import (
@@ -10,43 +35,26 @@ import (
 	"github.com/sagarsearce/go-mysql-react/userRoute"
 )
 
-/*
-	 routes :>>
-	 /
-	 /api
-		/api/auth
-			/api/auth/login
-			/api/auth/logout
-			/api/auth/signuo
-		/api/user
-			/api/user/relative
-			/api/user/relative/remove
-			/api/user/relative/update
-			/api/user/relative/delete
-			/api/user/relative/addrelation
-	/
-	   /index.html
-
-	 1. /api/auth ---> login, create account and logout
-	 2. /api/user/* --> all user activity
-*/
-
 func main() {
 	route := mux.NewRouter()
 	api := route.PathPrefix("/api").Subrouter()
+
+	// @Todo :
 
 	// auth := api.PathPrefix("/auth").Subrouter()
 	// auth.HandleFunc("/login", authRoute.HandleLogin)
 	// auth.HandleFunc("/logout", authRoute.HandleLogOut)
 	// auth.HandleFunc("/signup", authRoute.HandleSignUp)
 
-	userAction := api.PathPrefix("/relative").Subrouter()
-	userAction.HandleFunc("/", userRoute.GetRelatives)
-	userAction.HandleFunc("/add", userRoute.HandleAddRelative).Methods("POST")
-	userAction.HandleFunc("/update", userRoute.HandleUpdateRelative).Methods("POST")
-	userAction.HandleFunc("/delete", userRoute.HandleDeleteRelative).Methods("GET")
-	userAction.HandleFunc("/addrelation", userRoute.HandleAddRelation).Methods("POST")
+	userAction := api.PathPrefix("/person").Subrouter()
+	userAction.HandleFunc("/", userRoute.GetPersons)
+	userAction.HandleFunc("/add", userRoute.HandleAddPerson).Methods("POST")
+	userAction.HandleFunc("/update", userRoute.HandleUpdatePerson).Methods("POST")
+	userAction.HandleFunc("/delete", userRoute.HandleDeletePerson).Methods("GET")
 	userAction.HandleFunc("/relations", userRoute.GetRelations).Methods("GET")
+
+	relationAction := api.PathPrefix("/relation").Subrouter()
+	relationAction.HandleFunc("/add", userRoute.HandleAddRelation).Methods("POST")
 
 	staticFileDir := http.Dir("./build")
 
