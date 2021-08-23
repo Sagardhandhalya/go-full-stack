@@ -4,6 +4,8 @@
 
 The main idea was of the project is to visualize self-relation on a person table, in RDBMS we use self-relation to store the graph in the database, database contains only 2 tables one is the person and another is relation which mapping for 2 person. so we can visualize the connection of a person and all person and their connection as a graph.
 
+![Screenshot 2021-08-23 at 10 17 46 PM](https://user-images.githubusercontent.com/80812847/130488666-12f14f03-6967-4ac7-a1ba-3a9e23423344.png)
+
 
 ### Future plan 
 
@@ -51,6 +53,8 @@ go mod tidy
 go run main.go
 
 ```
+
+__If you are on windows machine you might not able to run go binary you need to white list this binary from antivirus.__
 
 #### Frontend set up 
 
