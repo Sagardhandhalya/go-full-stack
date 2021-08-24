@@ -149,7 +149,7 @@ func HandleAddRelation(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(relation)
 }
 
-// returns all persona avalable in the database
+// returns all persons avalable in the database
 func GetPersons(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var Persons []db.Person
@@ -172,7 +172,7 @@ func GetPersons(w http.ResponseWriter, r *http.Request) {
 }
 
 // return relation of a specific person, with given id
-func GetRelations(w http.ResponseWriter, r *http.Request) {
+func GetPersonRelations(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	id := r.URL.Query().Get("id")
 	if id == "" {
@@ -200,4 +200,25 @@ func GetRelations(w http.ResponseWriter, r *http.Request) {
 
 func Add(a int, b int) int {
 	return a + b
+}
+
+func GetRelations(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	var relations []db.Relation
+	rows, err := Db.Query("SELECT * FROM relations")
+	if err != nil {
+		http.Error(w, fmt.Sprintf("Error in fetching all relation %s", err.Error()), http.StatusInternalServerError)
+		return
+	}
+	for rows.Next() {
+		var r db.Relation
+		err := rows.Scan(&r.P1, &r.P2, &r.Name)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("Error in fetching all relation %s", err.Error()), http.StatusInternalServerError)
+			return
+		}
+		relations = append(relations, r)
+	}
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(relations)
 }

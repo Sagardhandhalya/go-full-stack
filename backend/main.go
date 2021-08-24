@@ -51,9 +51,10 @@ func main() {
 	userAction.HandleFunc("/add", userRoute.HandleAddPerson).Methods("POST")
 	userAction.HandleFunc("/update", userRoute.HandleUpdatePerson).Methods("POST")
 	userAction.HandleFunc("/delete", userRoute.HandleDeletePerson).Methods("GET")
-	userAction.HandleFunc("/relations", userRoute.GetRelations).Methods("GET")
+	userAction.HandleFunc("/relations", userRoute.GetPersonRelations).Methods("GET")
 
 	relationAction := api.PathPrefix("/relation").Subrouter()
+	relationAction.HandleFunc("/", userRoute.GetRelations).Methods("GET")
 	relationAction.HandleFunc("/add", userRoute.HandleAddRelation).Methods("POST")
 
 	staticFileDir := http.Dir("./build")
