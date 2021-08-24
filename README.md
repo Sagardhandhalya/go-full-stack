@@ -6,6 +6,7 @@ The main idea was of the project is to visualize self-relation on a person table
 
 ![Screenshot 2021-08-23 at 10 17 46 PM](https://user-images.githubusercontent.com/80812847/130488666-12f14f03-6967-4ac7-a1ba-3a9e23423344.png)
 
+![Screenshot 2021-08-25 at 1 13 51 AM](https://user-images.githubusercontent.com/80812847/130679948-ea9b4b50-ec5d-4bbf-810a-4a73b60bbd55.png)
 
 ### Future plan 
 
