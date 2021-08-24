@@ -1,18 +1,5 @@
 ## Full Stack application [ React - Go - Mysql ]
 
-### Project Descreption 
-
-The main idea was of the project is to visualize self-relation on a person table, in RDBMS we use self-relation to store the graph in the database, database contains only 2 tables one is the person and another is relation which mapping for 2 person. so we can visualize the connection of a person and all person and their connection as a graph.
-
-![Screenshot 2021-08-23 at 10 17 46 PM](https://user-images.githubusercontent.com/80812847/130488666-12f14f03-6967-4ac7-a1ba-3a9e23423344.png)
-
-![Screenshot 2021-08-25 at 1 13 51 AM](https://user-images.githubusercontent.com/80812847/130679948-ea9b4b50-ec5d-4bbf-810a-4a73b60bbd55.png)
-
-### Future plan 
-
-we store data in terms of persons and their connection so we can apply graph algorithms to find solutions to problems like person 1 is connected with person 2 if yes then find the shortest path, we can show this in the UI graph.
-
-
 ### Project Set up 
 
 
@@ -82,3 +69,16 @@ connection string formate will be
 
 
 2. we are using sass so install [this](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) vs code extention to compile sass to css. 
+
+### Project Descreption 
+
+The main idea was of the project is to visualize self-relation on a person table, in RDBMS we use self-relation to store the graph in the database, database contains only 2 tables one is the person and another is relation which mapping for 2 person. so we can visualize the connection of a person and all person and their connection as a graph.
+
+![Screenshot 2021-08-23 at 10 17 46 PM](https://user-images.githubusercontent.com/80812847/130488666-12f14f03-6967-4ac7-a1ba-3a9e23423344.png)
+
+![Screenshot 2021-08-25 at 1 13 51 AM](https://user-images.githubusercontent.com/80812847/130679948-ea9b4b50-ec5d-4bbf-810a-4a73b60bbd55.png)
+
+### Future plan 
+
+we store data in terms of persons and their connection so we can apply graph algorithms to find solutions to problems like person 1 is connected with person 2 if yes then find the shortest path, we can show this in the UI graph.
+
