@@ -1,0 +1,21 @@
+.line {
+  cursor: pointer;
+  stroke-width: 2;
+  stroke: blue;
+}
+
+.line:hover {
+  stroke-width: 7;
+}
+
+.graphedge__popup {
+  position: absolute;
+  background-color: #6ad4cc;
+  z-index: 200;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 200;
+  color: #1d1c1c;
+  padding: 10px;
+}
+/*# sourceMappingURL=GraphEdge.css.map */

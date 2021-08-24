@@ -1,11 +1,10 @@
-.graphview__container{
-    min-width: 80vw;
-    min-height: 80vh;
+.graphview__container {
     overflow: scroll;
-
-    .main__svg{
-        min-height: 80vh;
-        min-width: 80vw;
+    .main__svg {
+        max-width: 80vw;
+        max-height: 80vh;
+        min-width: 1000px;
+        min-height: 1000px;
         overflow: scroll;
     }
 }

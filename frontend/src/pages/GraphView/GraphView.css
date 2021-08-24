@@ -1,12 +1,12 @@
 .graphview__container {
-  min-width: 80vw;
-  min-height: 80vh;
   overflow: scroll;
 }
 
 .graphview__container .main__svg {
-  min-height: 80vh;
-  min-width: 80vw;
+  max-width: 80vw;
+  max-height: 80vh;
+  min-width: 1000px;
+  min-height: 1000px;
   overflow: scroll;
 }
 /*# sourceMappingURL=GraphView.css.map */
