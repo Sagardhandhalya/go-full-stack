@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import {deletePerson,updatePerson,createPerson, fetchAllPerson } from '../../apiCalls/apiCalls'
-import AddRelationForm from '../AddRelationForm/AddRelationForm'
-import ConnectionChart from '../ConnectionChart/ConnectionChart'
-import Modal from '../Modal/Modal'
-import PersonCard from '../PersonCard/PersonCard'
-import UpdatePersonForm from '../UpdatePersonForm/UpdatePersonForm'
+import AddRelationForm from '../../components/AddRelationForm/AddRelationForm'
+import ConnectionChart from '../../components/ConnectionChart/ConnectionChart'
+import Modal from '../../components/Modal/Modal'
+import PersonCard from '../../components/PersonCard/PersonCard'
+import UpdatePersonForm from '../../components/UpdatePersonForm/UpdatePersonForm'
 
 import "./CardView.css"
 const CardView = () => {

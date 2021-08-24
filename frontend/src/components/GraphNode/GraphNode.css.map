@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "GraphView.scss"
+        "GraphNode.scss"
     ],
     "names": [],
-    "file": "GraphView.css"
+    "file": "GraphNode.css"
 }

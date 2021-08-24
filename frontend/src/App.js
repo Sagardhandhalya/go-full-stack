@@ -2,8 +2,9 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-import CardView from './components/CardView/CardView';
-import GraphView from './components/GraphView/GraphView';
+import CardView from './pages/CardView/CardView';
+import GraphView from './pages/GraphView/GraphView';
+
 
 function App() {
   return (

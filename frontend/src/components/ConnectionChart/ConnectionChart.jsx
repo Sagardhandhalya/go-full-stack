@@ -20,7 +20,7 @@ const ConnectionChart = ({closeModal,id,persons}) => {
         fetchConnetionOfAPerson(id).then(res =>{
             let ctx = canvas.current.getContext('2d')
             if(res){
-                setH(res.length*50+80)
+                setH(res.length*50+60)
                 let idArr = res.map(r => r.p2)
                 let out = persons
                 .filter(p => idArr.includes(p.id))
