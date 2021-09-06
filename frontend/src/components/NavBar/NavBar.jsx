@@ -9,7 +9,6 @@ const NavBar = () => {
                <img src={logo} alt="brand name"/>
            </div>
            <ul className="navbar__right">
-            
             <li> <Link to="/">CARD VIEW</Link> </li>
             <li> <Link to="/g">GRAPH VIEW</Link></li>
             <li> <Link to="/contact">CONTACT</Link></li>
@@ -19,3 +18,4 @@ const NavBar = () => {
 }
 
 export default NavBar
+

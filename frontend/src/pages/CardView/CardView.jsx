@@ -79,7 +79,7 @@ const CardView = () => {
             onClick={() => setRelationOpen(true)}>Add Relation</button> </>:<div/>}
             <button className="btn btn-primary btn-lg  rounded-circle home__pluse" 
             onClick={() => setBtnStatus(!btnStatus)}>	&#x2B;</button>
-            <Modal open={updateOpen.status || createOpen || connectionOpen.status || relationOpen}>
+            <Modal role="dialog" aria-hidden="true"  open={updateOpen.status || createOpen || connectionOpen.status || relationOpen}>
                 {createOpen ? <UpdatePersonForm closeModal={setCreateOpen} onCreate={onCreate} /> : <div />}
                 {updateOpen.status ? <UpdatePersonForm closeModal={setUpdateOpen} person={updateOpen.person} onUpdate={onUpdate} /> : <div />}
                 {connectionOpen.status ? <ConnectionChart closeModal={setConnectionOpen} id={connectionOpen.id} persons={persons}/>:<div/>}

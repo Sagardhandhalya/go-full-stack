@@ -32,6 +32,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
+	"github.com/sagarsearce/go-mysql-react/authRoute"
 	"github.com/sagarsearce/go-mysql-react/userRoute"
 )
 
@@ -41,17 +42,16 @@ func main() {
 
 	// @Todo :
 
-	// auth := api.PathPrefix("/auth").Subrouter()
-	// auth.HandleFunc("/login", authRoute.HandleLogin)
-	// auth.HandleFunc("/logout", authRoute.HandleLogOut)
-	// auth.HandleFunc("/signup", authRoute.HandleSignUp)
+	auth := api.PathPrefix("/auth").Subrouter()
+	auth.HandleFunc("/login", authRoute.HandleLogin).Methods("GET")
+	auth.HandleFunc("/signup", authRoute.HandleSignUp).Methods("POST")
 
 	userAction := api.PathPrefix("/person").Subrouter()
-	userAction.HandleFunc("/", userRoute.GetPersons)
-	userAction.HandleFunc("/add", userRoute.HandleAddPerson).Methods("POST")
-	userAction.HandleFunc("/update", userRoute.HandleUpdatePerson).Methods("POST")
-	userAction.HandleFunc("/delete", userRoute.HandleDeletePerson).Methods("GET")
-	userAction.HandleFunc("/relations", userRoute.GetPersonRelations).Methods("GET")
+	userAction.HandleFunc("/", IsAuthorized(userRoute.GetPersons))
+	userAction.HandleFunc("/add", IsAuthorized(userRoute.HandleAddPerson)).Methods("POST")
+	userAction.HandleFunc("/update", IsAuthorized(userRoute.HandleUpdatePerson)).Methods("POST")
+	userAction.HandleFunc("/delete", IsAuthorized(userRoute.HandleDeletePerson)).Methods("GET")
+	userAction.HandleFunc("/relations", IsAuthorized(userRoute.GetPersonRelations)).Methods("GET")
 
 	relationAction := api.PathPrefix("/relation").Subrouter()
 	relationAction.HandleFunc("/", userRoute.GetRelations).Methods("GET")

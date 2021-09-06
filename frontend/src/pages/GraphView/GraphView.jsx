@@ -11,10 +11,10 @@ const GraphView = () => {
     useEffect(() => {
         fetchAllPerson().then((data) => {
             console.log(data);
-            let x = 200, y = 150;
+            let x = 20, y = 150;
             let persons = data.map((p, i) => {
-                if (i % 3 === 0 && i != 0) {
-                    y += 150 + Math.random() * 100;
+                if (i % 4 === 0 && i != 0) {
+                    y += 100 + Math.random() * 100;
                     x = 200
                 }
                 else {
@@ -35,8 +35,6 @@ const GraphView = () => {
     }, [])
 
     const handleMounseDown = (e, person) => {
-        console.log(e);
-        console.log("down");
         const el= e.currentTarget;
         console.log(e.pointerId);
         const bbox = e.target.getBoundingClientRect();
@@ -51,8 +49,6 @@ const GraphView = () => {
         const bbox = e.target.getBoundingClientRect();
         const x = e.clientX - bbox.left;
         const y = e.clientY - bbox.top;
-        console.log(e.clientX, e.clientY,bbox.left,bbox.top);
-        console.log(x,y);
         if (active) {
             let persons = personObjs.map((p, i) => {
                 if (p.id === person.id) {

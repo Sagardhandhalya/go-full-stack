@@ -41,7 +41,7 @@ const ConnectionChart = ({closeModal,id,persons}) => {
             <h3>Connection Chart</h3>
             <hr />
             <canvas width={w} height={h} ref={canvas}></canvas>
-            <button className="close-btn" onClick={()=> closeModal({status:false}) }>&#10060;</button>
+            <button tabIndex={0} className="close-btn" onClick={()=> closeModal({status:false}) }>&#10060;</button>
         </div>
     )
 }
