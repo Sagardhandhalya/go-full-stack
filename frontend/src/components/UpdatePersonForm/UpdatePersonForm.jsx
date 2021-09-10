@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState,useRef} from 'react'
 
 const UpdatePersonForm = ({person,onUpdate,onCreate,closeModal}) => {
 
@@ -6,9 +6,11 @@ const UpdatePersonForm = ({person,onUpdate,onCreate,closeModal}) => {
     const [city, setCity] = useState(person?.city || "")
     const [contactNo, setContactNo] = useState(person?.contactNo || "")
     const [photoUrl, setPhotoUrl] = useState(person?.photoUrl || "")
-
+    const ref = useRef(null)
     useEffect(() => {
         document.body.style.overflow = 'hidden'
+        ref.current.focus()
+        console.log(ref.current);
         return () => {
             document.body.style.overflow = ''
         }
@@ -17,12 +19,12 @@ const UpdatePersonForm = ({person,onUpdate,onCreate,closeModal}) => {
     
 
     return (
-        <div className="bg-white rounded-5  p-4">
+        <div className="bg-white rounded-5  p-4" ref={ref}>
             <h2>{person ? "update Person Form" : "Create New Person"}</h2>
             <hr />
             <div className="input">
                 <label className="form-label">Name</label>
-                <input className="form-control  mb-1" type="text" name="name" value={name} onChange={(e)=> setName(e.target.value)} />
+                <input tabIndex={0} className="form-control  mb-1" type="text" name="name" value={name} onChange={(e)=> setName(e.target.value)} />
             </div>
             <div className="input">
                 <label className="form-label">City</label>

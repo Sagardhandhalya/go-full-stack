@@ -4,7 +4,7 @@ const PersonCard = ({data,deleteFunc,editFunc,openConnectionsFunc}) => {
     const {id,name,city,contactNo,photoUrl} = data
     return (
         <div className="pcard__container card mb-3">
-            <img src={photoUrl} className="card-img-top mt-2" alt="" />
+            <img src={photoUrl} className="card-img-top mt-2" alt="name" />
             <hr />
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>

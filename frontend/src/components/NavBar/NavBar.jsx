@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <nav className="navbar__container">
            <div className="navbar__left">
-               <img src={logo} alt="brand name"/>
+               <img src={logo} alt="React logo"/>
            </div>
            <ul className="navbar__right">
             <li> <Link to="/">CARD VIEW</Link> </li>

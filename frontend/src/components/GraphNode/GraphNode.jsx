@@ -15,7 +15,7 @@ const GraphNode = ({ cx, cy, text, person,up,down,move }) => {
             </svg>
             {isPopUpOn ? <foreignObject x={cx - 20} y={cy - 100} width="100" height="100">
                 <div className="graphnode__popup">
-                    <img src={person?.photoUrl} className="card-image" alt="" />
+                    <img src={person?.photoUrl} className="card-image" alt={person?.name}/>
                     <p>{person?.name}</p>
                 </div>
             </foreignObject>

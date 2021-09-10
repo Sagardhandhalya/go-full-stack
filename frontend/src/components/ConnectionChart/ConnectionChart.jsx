@@ -7,9 +7,10 @@ const ConnectionChart = ({closeModal,id,persons}) => {
     const [h, setH] = useState(200)
     const [w, setW] = useState(400)
     const canvas = useRef(null)
-
+    const cancle = useRef(null)
     useEffect(() => {
         document.body.style.overflow = 'hidden'
+        cancle.current.focus()
         return () => {
             document.body.style.overflow = ''
         }
@@ -41,7 +42,7 @@ const ConnectionChart = ({closeModal,id,persons}) => {
             <h3>Connection Chart</h3>
             <hr />
             <canvas width={w} height={h} ref={canvas}></canvas>
-            <button tabIndex={0} className="close-btn" onClick={()=> closeModal({status:false}) }>&#10060;</button>
+            <button tabIndex={0} className="close-btn" ref={cancle} onClick={()=> closeModal({status:false}) }>&#10060;</button>
         </div>
     )
 }
